@@ -25,7 +25,7 @@ depending on operating system.
 
 ## TODO
 
-- [x] Documentation
+- [x] Documentation 12/07/24
 - [ ] Writeup
 - [ ] Convnet implementation
-- [ ] RNN implementatio
+- [ ] RNN implementation
