@@ -1,6 +1,8 @@
 # AI-Library
 
-![intro_img](https://udayton.edu/magazine/2021/01/images/2101_neuralnetwork_card.jpg)
+<p align="center">
+  <img src="https://udayton.edu/magazine/2021/01/images/2101_neuralnetwork_card.jpg" />
+</p>
 
 This is a project to make a simple, encapsulated and well commented and documented framework for making neural nets. As far as possible, I adhere to OOP paradigms and intend the library as a soft introduction to neural networks. I hope to also produce a latex file on the intuition behind design choices.
 
