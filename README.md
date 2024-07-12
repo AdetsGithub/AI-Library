@@ -11,9 +11,21 @@ pip install numpy
 pip install keras
 ```
 
+## Documentation
+
+Documentation is auto-generated using PyDoc. Navigate to AI-Library directory and run
+```
+python3 -m pydoc -p 3000
+```
+or
+```
+python -m pydoc -p 3000
+```
+depending on operating system.
+
 ## TODO
 
-- Documentation
-- Writeup
-- Convnet implementation
-- RNN implementatio
+- [x] Documentation
+- [] Writeup
+- [] Convnet implementation
+- [] RNN implementatio

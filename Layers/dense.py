@@ -15,11 +15,21 @@ class Dense(Layer):
         self.bias = rng.standard_normal((output_size, 1))
 
     def forward(self, input):
-        # Compute the forward propagation step
+        """
+        Compute the forward propagation step
+
+        @param: (np.array) input - input vector with dimensions n x 1
+        
+        @return: numpy array after forward pass through layer 
+        """
         self.input = input
         return np.dot(self.weights, self.input) + self.bias
 
     def backward(self, output_gradient, learning_rate):
+        """
+        Calculate partial derivatives for weights and input and update weights and biases
+        """
+        
         # Calculating partial derivates for output gradient wrt weight and output gradient wrt input gradient 
         weights_gradient = np.dot(output_gradient, self.input.T)
         input_gradient = np.dot(self.weights.T, output_gradient)

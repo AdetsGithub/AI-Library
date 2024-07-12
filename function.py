@@ -14,10 +14,10 @@ class Function(Layer):
         self.derivative = derivative
 
     def forward(self, input):
-        # Applies function function to input
+        """Applies function to input"""
         self.input = input
         return self.function(self.input)
 
     def backward(self, output_gradient, learning_rate):
-        # Calculate input gradient using the Hadamard product of the output gradient and the derivative of the function 
+        """Calculate input gradient using the Hadamard product of the output gradient and the derivative of the function""" 
         return np.multiply(output_gradient, self.derivative(self.input))

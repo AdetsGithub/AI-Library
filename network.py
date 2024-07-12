@@ -9,12 +9,13 @@ class Network:
         self.network = network
 
     def predict(self, input):
-        # Forward propagate input to obtain prediction
+        """Forward propagate input to obtain prediction"""
         for layer in self.network:
             input = layer.forward(input)
         return input
 
     def train(self, loss_func, train_data, target, epochs = 1000, learning_rate = 0.01, verbose = False):
+        """Forward propagate and backpropagate to train model"""
         for e in range(epochs):
             error = 0
             for x, y in zip(train_data, target):

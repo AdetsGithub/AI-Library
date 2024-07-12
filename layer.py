@@ -7,9 +7,9 @@ class Layer:
         # TODO: Declaration for layer parameters
         pass
     def forward(self, input):
-        # TODO: Implementation for forward propagation
+        """TODO: Implementation for forward propagation"""
         pass
 
     def backward(self, output_gradient, learning_rate):
-        # TODO: Implementation for backpropagation
+        """TODO: Implementation for backpropagation"""
         pass
