@@ -10,7 +10,7 @@ This is a project to make a simple, encapsulated and well commented and document
 
 You will need to install some dependencies for the code to run. These are minimal as code is mostly just vanilla python, NumpPy and graphing libraries
 ```
-pip install matlplotlib
+pip install matplotlib
 pip install numpy
 pip install keras
 ```
