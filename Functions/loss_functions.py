@@ -36,4 +36,4 @@ class BinaryCrossEntropy(Function):
     @staticmethod
     def derivative(y_true, y_pred):
         """Returns derivative of Binary Cross Entropy for predicted and true values"""
-        return np.mean((1 - y_true) / (1 - y_pred) - y_true / y_pred)
+        return (1 - y_true) / (1 - y_pred) - y_true / y_pred
