@@ -30,6 +30,6 @@ depending on operating system.
 ## TODO
 
 - [x] Documentation (as of 12/07/24)
-- [ ] Writeup
+- [x] Writeup (as of 14/07/24)
 - [ ] Convnet implementation
 - [ ] RNN implementation
