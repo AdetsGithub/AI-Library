@@ -17,6 +17,8 @@ pip install keras
 
 A write up of how the library is structured and some relevant mathematics can be found [here](https://github.com/AdetsGithub/AI-Library/blob/main/AI_Library.pdf)
 
+Some examples solved using the library can be found [here](https://github.com/AdetsGithub/AI-Library/tree/main/Examples)
+
 ## Documentation
 
 Documentation is auto-generated using PyDoc. Navigate to AI-Library directory and run
