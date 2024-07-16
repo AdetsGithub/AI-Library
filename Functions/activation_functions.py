@@ -20,3 +20,13 @@ class Logistic(Function):
         derivative = lambda x: logistic * (1 - logistic)
 
         super().__init__(logistic, derivative)
+
+class RelU(Function):
+    """
+    Implementation of the RelU funciton extends Function class
+    """
+    def __init__(self):
+        relu = lambda x: np.maximum(0, x)
+        derivative = lambda x: 1 * (x >= 0)
+
+        super().__init__(relu, derivative)
