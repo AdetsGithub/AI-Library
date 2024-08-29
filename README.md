@@ -22,13 +22,9 @@ Some examples solved using the library can be found [here](https://github.com/Ad
 
 Documentation is auto-generated using PyDoc. Navigate to AI-Library directory and run
 ```
-python3 -m pydoc -p 3000
+pydoc -b
 ```
-or
-```
-python -m pydoc -p 3000
-```
-depending on operating system.
+to open server on an arbitrary unused port.
 
 ## TODO
 
