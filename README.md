@@ -8,11 +8,10 @@ This is a project to make a simple, encapsulated and well commented and document
 
 ## Getting started
 
-You will need to install some dependencies for the code to run. These are minimal as code is mostly just vanilla python, NumpPy and graphing libraries
+You will need to install some dependencies for the code to run. These are minimal as code is mostly just vanilla python, NumpPy and graphing libraries. These can be installed by running
+
 ```
-pip install matplotlib
-pip install numpy
-pip install keras
+pip install -r requirements.txt
 ```
 
 A write up of how the library is structured and some relevant mathematics can be found [here](https://github.com/AdetsGithub/AI-Library/blob/main/AI_Library.pdf)
