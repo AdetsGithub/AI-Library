@@ -17,7 +17,7 @@ class Logistic(Function):
     """
     def __init__(self):
         logistic = lambda x: 1 / (1 + np.exp(-x))
-        derivative = lambda x: logistic * (1 - logistic)
+        derivative = lambda x: (1 / (1 + np.exp(-x))) * (1 - (1 / (1 + np.exp(-x))))
 
         super().__init__(logistic, derivative)
 
