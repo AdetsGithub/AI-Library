@@ -1,12 +1,13 @@
 from function import Function
 import numpy as np
 
+# Loss function does not need to be instantiated. Class only written in interest of encapsulation
+
 class MSE(Function):
     """
     Implementation of Mean Squared Error loss function extends Function class
     """
     def __init__(self):
-         # Loss function does not need to be instantiated. Class only written in interest of encapsulation
          pass
     
     @staticmethod
@@ -25,7 +26,6 @@ class BinaryCrossEntropy(Function):
     """
      
     def __init__(self):
-        # Loss function does not need to be instantiated. Class only written in interest of encapsulation
         pass
     
     @staticmethod
