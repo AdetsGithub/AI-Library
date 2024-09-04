@@ -33,6 +33,12 @@ class RelU(Function):
         super().__init__(relu, derivative)
 
 class Softmax(Layer):
+    """
+    Implementation of the Softmax function extends Layer class
+    """
+    def __init__(self):
+        pass
+
     def forward(self, input):
         tmp = np.exp(input - np.max(input))
         self.output = tmp / np.sum(tmp)
