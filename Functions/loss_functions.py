@@ -36,4 +36,22 @@ class BinaryCrossEntropy(Function):
     @staticmethod
     def derivative(y_true, y_pred):
         """Returns derivative of Binary Cross Entropy for predicted and true values"""
-        return (1 - y_true) / (1 - y_pred) - y_true / y_pred
+        return ((1 - y_true) / (1 - y_pred) - y_true / y_pred) / np.size(y_true)
+
+class CategoricalCrossEntropy(Function):
+    """
+    Implementation of Categorical Cross Entropy loss function extends Function class
+    """
+     
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def loss(y_true, y_pred):
+        """Returns Categorical Cross Entropy for predicted and true values"""
+        return -np.sum(y_true * np.log(y_pred + 10**-100))
+
+    @staticmethod
+    def derivative(y_true, y_pred):
+        """Returns derivative of Categorical Cross Entropy for predicted and true values"""
+        return -y_true / (y_pred + 10**-100)
