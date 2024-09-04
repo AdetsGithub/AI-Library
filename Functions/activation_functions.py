@@ -1,5 +1,6 @@
 import numpy as np
 from function import Function
+from layer import Layer
 
 class Tanh(Function):
     """
@@ -30,3 +31,13 @@ class RelU(Function):
         derivative = lambda x: 1 * (x >= 0)
 
         super().__init__(relu, derivative)
+
+class Softmax(Layer):
+    def forward(self, input):
+        tmp = np.exp(input - np.max(input))
+        self.output = tmp / np.sum(tmp)
+        return self.output
+    
+    def backward(self, output_gradient, learning_rate):
+        n = np.size(self.output)
+        return np.dot((np.identity(n) - self.output.T) * self.output, output_gradient)
