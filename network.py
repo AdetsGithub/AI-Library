@@ -29,7 +29,7 @@ class Network:
                 grad = loss_func.derivative(y, output)
                 for layer in reversed(self.network):
                     grad = layer.backward(grad, learning_rate)
-
-            error /= len(train_data)
+            # Normalise error
+            error /= len(train_data) 
             if verbose:
                 print(f"{e + 1}/{epochs}, error={error}")
