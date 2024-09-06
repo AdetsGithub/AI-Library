@@ -6,21 +6,22 @@ class Convolutional(Layer):
     """
     Implementation of abstract class Layer as a Convolutional layer (input is cross-correlated with kernel to produce an output matrix)
     
-    @param: (tuple) input_shape - height, depth and width of input
-    @param: (int) kernel_size - size of each matrix inside each kernel
-    @param: (int) depth - the number of kernels
+    @param: (tuple) input_shape - depth, height and width of input \n
+    @param: (int) kernel_size - size of each matrix inside each kernel \n
+    @param: (int) kernel_depth - the number of kernels
     """
-    def __init__(self, input_shape, kernel_size, depth, stride=1):
+    def __init__(self, input_shape, kernel_size, kernel_depth, stride=1, seed=123):
         input_depth, input_height, input_width = input_shape
         self.input_shape = input_shape
         self.input_depth = input_depth
-        self.depth = depth
+        self.depth = kernel_depth
         self.stride = stride
-        self.output_shape = (depth, input_height - kernel_size + 1, input_width - kernel_size + 1)
-        self.kernels_shape = (depth, input_depth, kernel_size, kernel_size)
+        self.output_shape = (kernel_depth, input_height - kernel_size + 1, input_width - kernel_size + 1)
+        self.kernels_shape = (kernel_depth, input_depth, kernel_size, kernel_size)
         # Initialise kernels and biases
-        self.kernels = np.random.randn(*self.kernels_shape)
-        self.biases = np.random.randn(*self.output_shape)
+        rng = np.random.default_rng(seed)
+        self.kernels = rng.standard_normal(self.kernels_shape)
+        self.biases = rng.standard_normal(self.output_shape)
 
     def forward(self, input):
         """
