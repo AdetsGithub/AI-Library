@@ -101,7 +101,6 @@ class RNN(Layer):
         self.by -= learning_rate * dby
 
     def train(self, prompt='a', learning_rate=0.001, n_epochs=10, verbose=False):
-        self.prompt = prompt
         for epoch in range(n_epochs):
             loss = 0
             for batch_idx in range(self.prp.inputs.shape[0]):
@@ -113,10 +112,10 @@ class RNN(Layer):
             # Example of generating text
             if verbose:
                 print(f'\nEpoch {epoch+1}/{n_epochs}, Loss: {loss/self.prp.inputs.shape[0]:.4f}')
-                generated_text = self.sample(self.prompt)
+                generated_text = self.sample(prompt)
                 print(generated_text)
 
-    def sample(self, prompt='the', length=500):
+    def sample(self, prompt, length=500):
 
         # Set the RNN to use the initial hidden state
         hidden_state = np.zeros((1, self.hidden_size))
