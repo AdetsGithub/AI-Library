@@ -49,7 +49,7 @@ Loss function implementations for:
 - Categorical Cross Entropy
 - Sum of Squared Errors
 
-## TODO
+## Versioning
 
 - [x] Documentation (as of 12/07/24)
 - [x] Writeup (as of 14/07/24)
