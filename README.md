@@ -26,9 +26,30 @@ pydoc -b
 ```
 to open server on an arbitrary unused port.
 
+## Features
+
+Layer implementations for:
+
+- Dense layer
+- Convolutional Layer
+- Reshape layer
+- Recurrent neural network (not a layer but don't have anywhere else to mention it)
+
+Activation function implementations for:
+
+- Tanh
+- Logistic
+- RelU
+- Softmax
+
+Loss function implementations for:
+
+- Mean Squared Error
+- Binary Cross Entropy
+- Categorical Cross Entropy
+- Sum of Squared Errors
+
 ## TODO
 
 - [x] Documentation (as of 12/07/24)
 - [x] Writeup (as of 14/07/24)
-- [ ] Convnet implementation
-- [ ] RNN implementation
